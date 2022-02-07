@@ -1,0 +1,49 @@
+@import "./style/variable";
+@import "./style/mixins";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gray;
+}
+.slider {
+  width: 100vw;
+  height: 70vh;
+  margin-top: 50px;
+  background-color: red;
+  position: relative;
+  &__img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    img {
+      height: 100%;
+      width: 100%;
+      background-image: url("/assets/history1.jpg");
+      //filter: saturate(0);
+    }
+  }
+  &__left {
+    background-color: rgb(210, 210, 210);
+    filter: opacity(20%);
+    @include horizontal(left);
+  }
+  &__right {
+    background-color: rgb(240, 240, 240);
+    filter: opacity(20%);
+    @include horizontal(right);
+  }
+}
+.btn {
+  opacity: 1;
+  height: 150px;
+  width: 50px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-size: $font-size;
+  cursor: pointer;
+}
