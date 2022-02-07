@@ -1,0 +1,18 @@
+@mixin horizontal($horizontal-aligment) {
+  //set default values
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  @if $horizontal-aligment == "left" {
+    //set left
+    left: 0;
+  } @else {
+    //set right
+    right: 0;
+  }
+}
