@@ -1,17 +1,18 @@
 @import "./style/variable";
 @import "./style/mixins";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
-  background-color: gray;
+  background-color: $bg-color;
 }
 .slider {
-  width: 100vw;
-  height: 70vh;
+  width: $width-of-slider;
+  height: $height-of-slider;
   margin-top: 50px;
-  background-color: red;
   position: relative;
   &__img {
     height: 100%;
@@ -23,18 +24,20 @@ body {
       height: 100%;
       width: 100%;
       background-image: url("/assets/history1.jpg");
+      animation-name: nextTo;
       //filter: saturate(0);
     }
   }
   &__left {
-    background-color: rgb(210, 210, 210);
-    filter: opacity(20%);
     @include horizontal(left);
   }
   &__right {
-    background-color: rgb(240, 240, 240);
-    filter: opacity(20%);
     @include horizontal(right);
+  }
+  &__dots {
+    width: 100%;
+    height: 5%;
+    background-color: red;
   }
 }
 .btn {
