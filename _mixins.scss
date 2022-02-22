@@ -1,13 +1,17 @@
 @mixin horizontal($horizontal-aligment) {
-  //set default values
+  //set default properties for left and right arrow
+  align-items: center;
+  background-color: $btn-color;
+  display: flex;
+  font-size: 64px;
+  filter: opacity(65%);
+  height: 100%;
+  justify-content: center;
   position: absolute;
   top: 0;
   width: 5%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 64px;
+
+  // checking parameter
   @if $horizontal-aligment == "left" {
     //set left
     left: 0;
