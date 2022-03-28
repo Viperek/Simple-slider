@@ -1,0 +1,23 @@
+@import "./variables";
+
+@media (min-width: $md) {
+  .slider {
+    &__left {
+      width: 5%;
+    }
+    &__right {
+      width: 5%;
+    }
+    &__dots {
+      background-color: brown;
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .slider {
+    &__dots {
+      background-color: brown;
+    }
+  }
+}

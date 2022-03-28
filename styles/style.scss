@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mixins";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg-color;
+  @include maxHeightWidth;
+}
+
+@import "./slider";
+
+.btn {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(80, 80, 80, 0.5);
+  border: none;
+}
+.active {
+  background-color: pink !important;
+  transition: all 1 ease-in-out;
+}
+
+//@import "./mediaqueries";
